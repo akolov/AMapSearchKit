@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "AMapSearchKitNoIDFA",
+  name: "AMapSearchKit",
   platforms: [.iOS(.v13)],
   products: [
     .library(
@@ -24,8 +24,7 @@ let package = Package(
       name: "AMapSearchKit",
       dependencies: [
         .product(name: "AMapFoundationKit", package: "AMapFoundationKitNoIDFA")
-      ],
-      path: "Sources/AMapSearchKit"
+      ]
     ),
     .binaryTarget(name: "AMapSearchKitSource", path: "Vendor/AMapSearchKit.xcframework")
   ]
