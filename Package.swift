@@ -20,12 +20,6 @@ let package = Package(
     )
   ],
   targets: [
-    .target(
-      name: "AMapSearchKit",
-      dependencies: [
-        .product(name: "AMapFoundationKit", package: "AMapFoundationKitNoIDFA")
-      ]
-    ),
-    .binaryTarget(name: "AMapSearchKitSource", path: "Vendor/AMapSearchKit.xcframework")
+    .binaryTarget(name: "AMapSearchKit", path: "Vendor/AMapSearchKit.xcframework")
   ]
 )
