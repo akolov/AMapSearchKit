@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-  name: "AMapSearchKit",
+  name: "AMapSearchKitNoIDFA",
   platforms: [.iOS(.v13)],
   products: [
     .library(
-      name: "AMapSearchKitNoIDFA",
-      targets: ["AMapSearchKitNoIDFA"]
+      name: "AMapSearchKit",
+      targets: ["AMapSearchKit"]
     ),
   ],
   dependencies: [
@@ -21,12 +21,12 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "AMapSearchKitNoIDFA",
+      name: "AMapSearchKit",
       dependencies: [
         .product(name: "AMapFoundationKit", package: "AMapFoundationKitNoIDFA")
       ],
       path: "Sources/AMapSearchKit"
     ),
-    .binaryTarget(name: "AMapSearchKit", path: "Vendor/AMapSearchKit.xcframework")
+    .binaryTarget(name: "AMapSearchKitSource", path: "Vendor/AMapSearchKit.xcframework")
   ]
 )
